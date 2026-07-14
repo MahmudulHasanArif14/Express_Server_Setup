@@ -6,6 +6,12 @@ const app = express();
 // api creation in express 
 app.get("/home", (req, res) => {
     res.send("Welcome to the Home Page");
+    // or can be written 
+    res.end("Welcome to the Home Page");
+    // both works but res.send() is more preferred as it sets the content-type header automatically
+});
+app.get("/about", (req, res) => {
+    res.send("Welcome to the About Page");
 });
 
 
