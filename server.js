@@ -3,6 +3,11 @@ const express = require("express");
 // create server
 const app = express();
 
+const connectDB = require("./src/db/db");
+
+// connect to database
+connectDB();
+
 // api creation in express
 app.get("/home", (req, res) => {
   res.send("Welcome to the Home Page");
